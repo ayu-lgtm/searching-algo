@@ -1,0 +1,3 @@
+# searching-algo
+1.BINARY SEARCH
+2.LINEAR SEARCH
