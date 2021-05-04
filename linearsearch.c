@@ -17,27 +17,23 @@ void array(int p[],int q)
     printf("%d",p[q]);
     printf("}");
 }
-void insertion_sort(int p[],int q)
+void find(int p[],int q,int l)
 {
-    int key, j;
-    for (int i =2; i <= q; i++)
+    int i;
+    int z=1;
+    for(i=1;i<=q;i++)
     {
-        key=p[i];
-        j=i-1;
-        while(j>=1 && p[j]>key){
-                p[j+1]=p[j];
-                j=j-1;
-            }
-        p[j+1]=key;
+        if(p[i]==l)
+        {
+            printf("\nElement %d Present In %d position.\n",l,i);
+            z=0;
+        }
+
     }
-    printf("{");
-    printf("%d,",p[1]);
-    for(int i=2;i<q;i++)
+    if(z==1)
     {
-        printf("%d,",p[i]);
+        printf("\n%d isn't Present in the array a[%d].\n",l,q);
     }
-    printf("%d",p[q]);
-    printf("}");
 }
 int main()
 {
@@ -48,7 +44,9 @@ int main()
     array(a,n);
     int l;
     printf("\n");
-    printf("for insertion_sort...\n");
-    insertion_sort(a,n);
+    printf("For Searching Elememt,Enter NUMBER: ");
+    scanf("%d",&l);
+    printf("\n");
+    find(a,n,l);
     return 0;
 }
